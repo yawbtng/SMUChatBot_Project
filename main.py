@@ -12,14 +12,14 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 load_dotenv()
 
 
-qdrantHost = os.environ['QDRANT_HOST']
+qdrant_host = os.environ['QDRANT_HOST']
 qdrant_api_key = os.environ['QDRANT_API_KEY']
 openai_api_key = os.environ['OPENAI_API_KEY']
 qdrant_collection_name = os.environ['QDRANT_COLLECTION_NAME']
 
 # Initialize Qdrant client.
 client = qdrant_client.QdrantClient(
-    url=qdrantHost, 
+    url=qdrant_host, 
     api_key = qdrant_api_key,
 )
 
@@ -38,15 +38,15 @@ client.recreate_collection(
 # create vector store
 def get_vector_store():
     client = qdrant_client.QdrantClient(
-    os.getenv("QDRANT_HOST"), 
-    api_key = os.getenv('QDRANT_API_KEY'),
+    qdrant_host, 
+    api_key = qdrant_api_key,
     )
 
     embeddings = OpenAIEmbeddings()
 
     vector_store = Qdrant(
         client=client, 
-        collection_name=os.getenv("QDRANT_COLLECTION_NAME"), 
+        collection_name=qdrant_collection_name, 
         embeddings=embeddings,
     )
 
@@ -78,7 +78,7 @@ texts = get_txt_from_pdfs(pdf_paths)
 # function to split up text into chunks
 def get_chunks(text):
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
+        chunk_size=600,
         chunk_overlap=50,
         length_function=len
     ) 

@@ -1,20 +1,9 @@
 from langchain.chat_models import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
-from langchain.schema import StrOutputParser
-from langchain.schema.runnable import Runnable
-from langchain.schema.runnable.config import RunnableConfig
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Qdrant
 from langchain.chat_models import ChatOpenAI
-from langchain.chains import LLMChain
-from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationSummaryBufferMemory
 from langchain.chains import ConversationalRetrievalChain
-from langchain.prompts.chat import (
-    ChatPromptTemplate,
-    SystemMessagePromptTemplate,
-    HumanMessagePromptTemplate,
-)
 from qdrant_client import qdrant_client
 import chainlit as cl
 import os
@@ -60,6 +49,8 @@ async def on_chat_start():
     elements = [cl.Image(name="smu_icon", display="inline", path="./smu_icon.png")]
     await cl.Message(content="Welcome to PerunaBot! Your guide to all things SMU", elements=elements, author="PerunaBot").send()
     await cl.Avatar(name="Chatbot", path="./smu_icon.png",).send()
+
+
 
 
     memory = ConversationSummaryBufferMemory(
