@@ -46,11 +46,9 @@ LLM = ChatOpenAI(temperature=0, model="gpt-3.5-turbo", api_key=openai_api_key, v
 async def on_chat_start():
     
     # Display a welcome message and image
-    elements = [cl.Image(name="smu_icon", display="inline", path="./smu_icon.png")]
+    elements = [cl.Image(name="smu_icon", display="inline", path="C:/Users/yawbt/OneDrive/Documents/GitHub/SMUChatBot_Project/Images/smu_icon.png")]
     await cl.Message(content="Welcome to PerunaBot! Your guide to all things SMU", elements=elements, author="PerunaBot").send()
-    await cl.Avatar(name="Chatbot", path="./smu_icon.png",).send()
-
-
+    await cl.Avatar(name="Chatbot", path="C:/Users/yawbt/OneDrive/Documents/GitHub/SMUChatBot_Project/Images/smu_icon.png").send()
 
 
     memory = ConversationSummaryBufferMemory(
