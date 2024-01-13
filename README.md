@@ -1,6 +1,5 @@
 <h1>SMU ChatBot Project</h1>
-**Background information for this project**: (medium article)
-
+<br>
 <h2>Project Description</h2>
 PerunaBot is a sophisticated and user-friendly chatbot designed to assist students and faculty at Southern Methodist University. This project leverages the power of OpenAI's technology and integrates with the Qdrant vector database to provide accurate and relevant information. It's built using: Python, ChainLit, Langchain Qdrant, and Streamlit.
 
@@ -10,17 +9,18 @@ Key features of the SMU ChatBot include:
 -An interactive chatbot interface created with Chainlit.
 -Advanced search and retrieval powered by Qdrant.
 -This project aims to create an accessible and helpful resource for the SMU community, streamlining access to critical university information.
-
+<br>
 <h2>Contributing</h2>
 We welcome contributions to the SMU ChatBot Project! If you're interested in contributing or want to join the project, please visit the Contact section below for more information. Your expertise and insights can help enhance this valuable tool.
-
+<br>
 <h2>Contact</h2>
 For any inquiries or further information regarding the SMU ChatBot Project, please reach out to:
 
 Yaw Boateng
 Email: yboateng@smu.edu
 LinkedIn: http://www.linkedin.com/in/yaw-osei-boateng
-
+[Background information on this project](https://medium.com/@yabtngjr/the-story-behind-perunabot-fab78783ba09)
+<br>
 <h2>Acknowledgements</h2>
 This project wouldn't have been possible without the following resources and tools:
 
