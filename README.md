@@ -36,6 +36,4 @@ This project wouldn't have been possible without the following resources and too
 
 -And all the [YouTube tutorials](https://www.youtube.com/playlist?list=PLMVV8yyL2GN_n41v1ESBvDHwMbYYhlAh1) and free articles I found to create this project (more resources to come soon)
 
-<h2>Logistics and Updates</h2>
 
--**1/13/2024** PerunaBot is on version 0.01: The chatbot interface has been created, however there is no "personality" or instructions in it like a [custom GPT from OpenAI has](https://openai.com/blog/introducing-gpts) has. Next steps are to improve the retrieval from the Qdrant vector store by utilizing [contextual compression](https://blog.langchain.dev/improving-document-retrieval-with-contextual-compression/) and to give the chatbot a personality to deal with inappropriate responses, error handling, specific response format by potentially using [OpenAI Assistants API](https://platform.openai.com/docs/assistants/overview).
