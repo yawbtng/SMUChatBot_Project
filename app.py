@@ -5,6 +5,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationSummaryBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from qdrant_client import qdrant_client
+from literalai import LiteralClient
 import chainlit as cl
 import os
 
@@ -16,6 +17,8 @@ qdrant_host = os.environ['QDRANT_HOST']
 qdrant_api_key = os.environ['QDRANT_API_KEY']
 openai_api_key = os.environ['OPENAI_API_KEY']
 qdrant_collection_name = os.environ['QDRANT_COLLECTION_NAME']
+literal_api_key = os.environ['LITERAL_API_KEY']
+literal_host = os.environ['LITERAL_HOST_URL']
 
 # Function to get the Qdrant vector store.
 def get_vector_store():
@@ -40,6 +43,7 @@ VECTOR_STORE = get_vector_store()
 # initializing the llm
 LLM = ChatOpenAI(temperature=0, model="gpt-3.5-turbo", api_key=openai_api_key, verbose=True)
 
+client = LiteralClient(api_key=literal_api_key, url=literal_host)
 
 # Start of the chat, set up the chat environment
 @cl.on_chat_start

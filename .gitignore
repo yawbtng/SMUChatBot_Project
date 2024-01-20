@@ -1,2 +1,5 @@
 .env
 .env
+.dockerignore
+dockerfile
+hosted-app.py
