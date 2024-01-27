@@ -35,7 +35,7 @@ multi_modal = true
 
 [UI]
 # Name of the app and chatbot.
-name = "Chatbot"
+name = "PerunaBot"
 
 # Show the readme while the thread is empty.
 show_readme_as_default = true
@@ -50,7 +50,7 @@ default_collapse_content = true
 default_expand_messages = false
 
 # Hide the chain of thought details from the user in the UI.
-hide_cot = false
+hide_cot = true
 
 # Link to your github repo. This will add a github button in the UI's header.
 # github = ""
