@@ -3,7 +3,7 @@
 import os
 from dotenv import load_dotenv
 import pandas as pd
-import PyPDF2
+import pypdf
 from qdrant_client import qdrant_client
 from qdrant_client.http import models
 from langchain.embeddings import OpenAIEmbeddings
@@ -66,7 +66,7 @@ def load_pdf_documents(pdf_paths):
             # Open the PDF file in binary read mode
             with open(path, 'rb') as file:
                 # Read the PDF file using PyPDF2
-                pdf_reader = PyPDF2.PdfFileReader(file)
+                pdf_reader = pypdf.PdfFileReader(file)
                 pdf_documents.append(pdf_reader)
         except Exception as e:
             print(f"Error loading {path}: {e}")

@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 import pandas as pd
-import PyPDF2
+import pypdf
 from qdrant_client import qdrant_client
 from qdrant_client.http import models
 from langchain.embeddings import OpenAIEmbeddings
@@ -60,7 +60,7 @@ def get_txt_from_pdfs(pdf_paths):
     concatenated_raw_text = ''
     for pdf_path in pdf_paths:
         with open(pdf_path, 'rb') as file:
-            pdf_reader = PyPDF2.PdfReader(file)
+            pdf_reader = pypdf.PdfReader(file)
             for page_num in range(len(pdf_reader.pages)):
                 page = pdf_reader.pages[page_num]
                 concatenated_raw_text += page.extract_text()
