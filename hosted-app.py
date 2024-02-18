@@ -74,7 +74,7 @@ count = 0
 
 def max_number_of_questions():
     global count
-    if count > 7: # checks if count is more than 5
+    if count > 20: # checks if count is more than 20
         return False
     return True
 
