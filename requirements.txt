@@ -7,3 +7,4 @@ chainlit==1.0.100
 python-dotenv==1.0.0
 pillow==10.2.0
 tiktoken==0.5.2
+sympy==1.9
