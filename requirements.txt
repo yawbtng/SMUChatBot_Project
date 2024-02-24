@@ -2,9 +2,8 @@ openai==1.6.1
 pypdf==3.9.0
 qdrant-client
 langchain==0.0.354
-literalai==0.0.102
-chainlit==1.0.100
+literalai==0.0.204
+chainlit==1.0.300
 python-dotenv==1.0.0
-pillow==10.2.0
 tiktoken==0.5.2
 sympy==1.9
