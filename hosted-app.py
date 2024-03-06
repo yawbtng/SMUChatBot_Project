@@ -53,7 +53,7 @@ async def on_chat_start():
     # elements = [cl.Image(name="smu_icon", display="inline", path="./Images/smu_icon.png")]
     await cl.Message(content="Welcome to PerunaBot! Your guide to all things SMU! Please go back and look at the 'README' file in the top left corner before typing any chats!", 
                      author="PerunaBot").send()
-    await cl.Avatar(name="PerunaBot", path="./Images/smu_icon.png").send()
+   ## await cl.Avatar(name="PerunaBot", path="./Images/smu_icon.png").send()
 
 
     memory = ConversationSummaryBufferMemory(
