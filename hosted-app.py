@@ -50,9 +50,9 @@ client = LiteralClient(api_key=literal_api_key)
 async def on_chat_start():
     
     # Display a welcome message and image
-    elements = [cl.Image(name="smu_icon", display="inline", path="./Images/smu_icon.png")]
+    # elements = [cl.Image(name="smu_icon", display="inline", path="./Images/smu_icon.png")]
     await cl.Message(content="Welcome to PerunaBot! Your guide to all things SMU! Please go back and look at the 'README' file in the top left corner before typing any chats!", 
-                     elements=elements, author="PerunaBot").send()
+                     author="PerunaBot").send()
     await cl.Avatar(name="PerunaBot", path="./Images/smu_icon.png").send()
 
 
