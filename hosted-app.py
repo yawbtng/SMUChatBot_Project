@@ -1,5 +1,5 @@
-from langchain_community.chat_models import ChatOpenAI
-from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_openai import ChatOpenAI
+from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Qdrant
 from langchain.memory import ConversationSummaryBufferMemory
 from langchain.chains import ConversationalRetrievalChain
@@ -40,7 +40,7 @@ def get_vector_store():
 VECTOR_STORE = get_vector_store()
 
 # initializing the llm
-LLM = ChatOpenAI(temperature=0, model="gpt-3.5-turbo", api_key=openai_api_key, verbose=True)
+LLM = ChatOpenAI(temperature=0, model="gpt-3.5-turbo", verbose=True)
 
 client = LiteralClient(api_key=literal_api_key)
 
