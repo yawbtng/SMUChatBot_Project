@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# But include these specific folders/files
+!.env
+!hosted-app.py
+!.chainlit
+!chainlit.md
+!requirements.txt
