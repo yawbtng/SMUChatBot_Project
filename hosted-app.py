@@ -9,7 +9,6 @@ import chainlit as cl
 import os
 
 from dotenv import load_dotenv
-from sympy import false, true
 
 # Load environment variables.
 load_dotenv()
@@ -70,11 +69,7 @@ async def on_chat_start():
 
 count = 0
 
-def max_number_of_questions():
-    global count
-    if count > 20: # checks if count is more than 20
-        return False
-    return True
+
 
 @cl.on_message
 async def main(message: cl.Message):
@@ -92,14 +87,11 @@ async def main(message: cl.Message):
     # Increment the count for each messag
     count += 1
 
-    if max_number_of_questions(): # if number of questions asked is less than 5, normal response will come
-        # Process the user's message using the chain and callback
-        res = await chain.acall(message.content, callbacks=[cb])
+    
+    # Process the user's message using the chain and callback
+    res = await chain.acall(message.content, callbacks=[cb])
 
-        # Extract the answer from the response
-        answer = res["answer"]
+    # Extract the answer from the response
+    answer = res["answer"]
 
-        await cl.Message(content=answer).send()
-        
-    else:
-        await cl.Message(content="You have reached the maximum number of questions for this session. Thank you!").send()
+    await cl.Message(content=answer).send()

@@ -6,4 +6,4 @@ literalai==0.0.204
 chainlit==1.0.300
 python-dotenv==1.0.0
 tiktoken==0.5.2
-sympy==1.9
+langchain-openai

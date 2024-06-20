@@ -1,9 +1,11 @@
 # Ignore everything
 *
+.venv/
+.files/
 
 # But include these specific folders/files
 !.env
 !hosted-app.py
-!.chainlit
+!.chainlit/
 !chainlit.md
 !requirements.txt
