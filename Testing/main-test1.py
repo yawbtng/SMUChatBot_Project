@@ -66,7 +66,7 @@ def load_pdf_documents(pdf_paths):
             # Open the PDF file in binary read mode
             with open(path, 'rb') as file:
                 # Read the PDF file using PyPDF2
-                pdf_reader = pypdf.PdfFileReader(file)
+                pdf_reader = pypdf.PdfReader(file)
                 pdf_documents.append(pdf_reader)
         except Exception as e:
             print(f"Error loading {path}: {e}")
